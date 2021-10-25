@@ -335,8 +335,6 @@ dffinal2a$majority <- factor(dffinal2a$majority , levels = c("White", "Black", "
 dffinal2b$majority <- factor(dffinal2b$majority , levels = c("White", "Black", "Hispanic or Latino"))
 
 #Or if you want to plot both 2020 and 2021 data on one chart:
-dffinal7$majority <- factor(dffinal7$majority , levels = c("White", "Black", "Hispanic or Latino"))
-
 dffinal3<-dffinal2%>%
   group_by(majority, DateApproved)%>%
   summarise(Total = sum(CurrentApprovalAmount))%>% 
