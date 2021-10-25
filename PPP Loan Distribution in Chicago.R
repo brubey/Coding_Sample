@@ -342,6 +342,7 @@ dffinal3<-dffinal2%>%
 
 dffinal3$majority <- factor(dffinal3$majority , levels = c("White", "Black", "Hispanic or Latino"))
 
+#Plot the Data
 ggp41<-dffinal2a%>%
   ggplot(aes(x = DateApproved, y= Total, fill = majority))+
   geom_bar(stat = "identity")+
