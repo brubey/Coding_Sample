@@ -337,12 +337,12 @@ dffinal2b$majority <- factor(dffinal2b$majority , levels = c("White", "Black", "
 #Or if you want to plot both 2020 and 2021 data on one chart:
 dffinal7$majority <- factor(dffinal7$majority , levels = c("White", "Black", "Hispanic or Latino"))
 
-dffinal7<-dffinal6%>%
+dffinal3<-dffinal2%>%
   group_by(majority, DateApproved)%>%
   summarise(Total = sum(CurrentApprovalAmount))%>% 
   select(majority, DateApproved, Total)
 
-dffinal7$majority <- factor(dffinal7$majority , levels = c("White", "Black", "Hispanic or Latino"))
+dffinal3$majority <- factor(dffinal3$majority , levels = c("White", "Black", "Hispanic or Latino"))
 
 ggp41<-dffinal2a%>%
   ggplot(aes(x = DateApproved, y= Total, fill = majority))+
@@ -371,5 +371,4 @@ ggp42<-dffinal2b%>%
   scale_x_date(date_labels = "%B %Y") +
   theme_bw() 
 
-grid.arrange(ggp41, ggp42, ncol = 1)  
-
+grid.arrange(ggp41, ggp42, ncol = 1) 
