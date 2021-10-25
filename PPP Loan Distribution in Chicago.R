@@ -290,7 +290,7 @@ totalmoney2 %>%
   geom_text(aes(label = round(Value,2)), position = position_dodge(width = .40), vjust = 0, hjust = .5)+
   ylab("Percent") + xlab("") +
   scale_x_discrete(labels=c("Lowest Quintile:\n<$38.6K", "Second Quintile:\n$38.6K - $51.9K", "Middle Quintile:\n$51.9K - $69.2K", "Fourth Quintile:\n$69.2K - $101.5K", "Top Quintile:\n>$101.5K")) +
-  ggtitle("The Middle and Fourth Quintiles Account for More\nthan Half of the Population and Only 34% of PPP Dollars") +
+  ggtitle("The Middle and Fourth Quintiles Account for More\nthan 40% of the Population and Only 27.8% of PPP Dollars") +
   labs(subtitle = "Figure 3: Percent of All PPP Dollars Distributed\nby Zip Code Median Household Income Quintile Relative to Zip Code Population", caption = "Source: U.S. Small Business Administration;\nU.S. Census  2019 American Community Survey: 5-Year Data;\nIPUMS NHGIS, University of Minnesota, www.nhgis.org;\nAuthor's Calculations.\n\nBlake Rubey.") +
   labs(fill="") +
   theme_bw()
