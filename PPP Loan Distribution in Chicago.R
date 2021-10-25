@@ -112,7 +112,7 @@ map1$majority[map1$majority == "percentB"] <- "Black"
 map1$majority[map1$majority == "percentL"] <- "Hispanic or Latino"
 
 #Rearrange the Legend Order
-map1$majority <- factor(map1$majority , levels = c("White", "Black", "Hispanic or Latino"))
+map1$majority <- factor(map1$majority , levels = c("Black","Hispanic or Latino", "White"))
 
 #Convert back to Data.Frame
 setDF(map1)
@@ -170,7 +170,7 @@ finalmap<-distinct(finalmap)
 #Plot the Data
 ggp11<- ggplot() +
   geom_sf(data = finalmap, aes(fill = majority)) +
-  scale_fill_manual(labels = c("White", "Black", "Hispanic or Latino"), values = c("dodgerblue4", "lightsteelblue2", "dodgerblue2"))+
+  scale_fill_manual(labels = c("Black","Hispanic or Latino", "White"), values = c("lightsteelblue2", "dodgerblue2", "dodgerblue4"))+
   coord_sf(datum = NA) + #removes Lat and Long Labels from the Figure
   theme(rect = element_blank()) +#removes gray background
   ggtitle("Racial and Ethnic Demographics of Zip Codes in Chicago")+
